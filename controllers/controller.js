@@ -14,7 +14,6 @@ app.get("/", function(req, res) {
 
 // your components will use this to query MongoDB for all saved articles
 app.get("/api/saved", function(req, res) {
-  // res.send({test: "tom"});
 
   // We will find all the records, sort it in descending order
   Article.find({}).sort([ ["date", "descending"] ])
